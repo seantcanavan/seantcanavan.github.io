@@ -11,7 +11,8 @@ import Testimonial from "../components/Testimonial";
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
-  const [services, setServices] = useState([]);
+  const [technicalSkills, setTechnicalSkills] = useState([]);
+  const [interpersonalSkills, setInterpersonalSkills] = useState([]);
   const [reviews, setReviews] = useState([]);
 
   const sliderSettings = {
@@ -46,8 +47,11 @@ function About() {
     axios.get("/api/information").then((response) => {
       setInformation(response.data);
     });
-    axios.get("/api/services").then((response) => {
-      setServices(response.data);
+    axios.get("/api/technical-skills").then((response) => {
+      setTechnicalSkills(response.data);
+    });
+    axios.get("/api/interpersonal-skills").then((response) => {
+      setInterpersonalSkills(response.data);
     });
     axios.get("/api/reviews").then((response) => {
       setReviews(response.data);
@@ -124,7 +128,7 @@ function About() {
           <Sectiontitle title="Technical Skills" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
-              {services.map((service) => (
+              {technicalSkills.map((service) => (
                 <div
                   className="col-lg-4 col-md-6 col-12 mt-30"
                   key={service.title}
@@ -139,7 +143,7 @@ function About() {
           <Sectiontitle title="Interpersonal Skills" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
-              {services.map((service) => (
+              {interpersonalSkills.map((service) => (
                 <div
                   className="col-lg-4 col-md-6 col-12 mt-30"
                   key={service.title}

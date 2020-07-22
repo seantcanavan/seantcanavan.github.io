@@ -12,12 +12,12 @@ const database = {
       linkedin: 'https://linkedin.com/in/seantcanavan',
       github: 'https://github.com/seantcanavan'
     },
-    brandImage: '/images/brand-image.jpg',
-    aboutImage: '/images/about-image.jpg',
-    aboutImageLg: '/images/about-image-lg.jpg',
+    brandImage: '/images/github-avatar.png',
+    aboutImage: '/images/750x1089-code.png',
+    aboutImageLg: '/images/890x1293-code.png',
     resumeFile: '/files/SeanCanavanResume2020.pdf'
   },
-  services: [
+  technicalSkills: [
     {
       title: "Web Server Design",
       icon: 'code',
@@ -30,6 +30,23 @@ const database = {
     },
     {
       title: "Database Design",
+      icon: 'database',
+      details: "SQL, NoSQL, indexes, compound keys, transactions, and document store versus key-value."
+    }
+  ],
+  interpersonalSkills: [
+    {
+      title: "Interpersonal 1",
+      icon: 'code',
+      details: "An expert at scaling web apps and optimizing back end designs for millions of requests."
+    },
+    {
+      title: "Interpersonal 2",
+      icon: 'website',
+      details: "Self-taught React developer, student, and addict learning more and more every day."
+    },
+    {
+      title: "Interpersonal 3",
       icon: 'database',
       details: "SQL, NoSQL, indexes, compound keys, transactions, and document store versus key-value."
     }
@@ -274,46 +291,46 @@ const database = {
       {
         id: 1,
         year: "2018 - Present",
-        position: "Frontend Web Developer",
-        company: "Abc Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        position: "Full Stack Developer and Tech Lead",
+        company: "GoGuardian",
+        details: "Technical lead for the Admin product’s engineering teams both local and overseas. Led design discussions, cross-team collaborations, and acted as the first point of contact for all technical questions related to the product. Performed feasibility analysis and story point estimation for all significant engineering initiatives."
       },
       {
         id: 2,
         year: "2016 - 2018",
-        position: "Frontend Web Developer",
-        company: "CBA Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        position: "Backend Developer",
+        company: "Repost Network",
+        details: "Second engineer at a burgeoning tech music startup focused on digital rights management and music distribution for new and upcoming artists. Worked directly with the CTO daily and helped the company grow their userbase 3x, became head of company culture, and performed pivotal hiring duties."
       },
       {
         id: 3,
         year: "2014 - 1016",
-        position: "UI/UX Designer",
-        company: "Example Company",
+        position: "Cloud Security Engineer",
+        company: "Cisco Systems",
         details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
       }
     ],
     educationExperience: [
       {
         id: 1,
-        year: "2018 - 2019",
-        graduation: "Master of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2009 - 2013",
+        graduation: "Bachelor of Science - Software Engineering",
+        university: "San Jose State University",
+        details: "120/120 units completed"
       },
       {
         id: 2,
-        year: "2016 - 2018",
-        graduation: "Bachelor of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2006 - 2009",
+        graduation: "Minor, Mathematics",
+        university: "San Jose State University",
+        details: "18/18 units completed"
       },
       {
         id: 3,
         year: "2015 - 2016",
-        graduation: "Higher Schoold Graduation",
-        university: "Abc College",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        graduation: "Bachelor of Science - Electrical Engineering",
+        university: "San Jose State University",
+        details: "76/135 units completed"
       }
     ]
   },
@@ -467,8 +484,13 @@ Mock.onGet("/api/information").reply(config => {
   return [200, response];
 });
 
-Mock.onGet("/api/services").reply(config => {
-  const response = database.services;
+Mock.onGet("/api/technical-skills").reply(config => {
+  const response = database.technicalSkills;
+  return [200, response];
+});
+
+Mock.onGet("/api/interpersonal-skills").reply( config => {
+  const response = database.interpersonalSkills;
   return [200, response];
 });
 

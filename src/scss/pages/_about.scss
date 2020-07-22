@@ -6,27 +6,27 @@
   &-image {
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 65%;
-      width: 15px;
-      background: rgba($color-theme, 0.6);
-    }
+    //&::before {
+    //  content: "";
+    //  position: absolute;
+    //  left: 0;
+    //  top: 0;
+    //  height: 65%;
+    //  width: 15px;
+    //  background: rgba($color-theme, 0.6);
+    //}
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: auto;
-      right: 0;
-      top: auto;
-      bottom: 0;
-      height: 65%;
-      width: 15px;
-      background: rgba($color-theme, 0.6);
-    }
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  left: auto;
+    //  right: 0;
+    //  top: auto;
+    //  bottom: 0;
+    //  height: 65%;
+    //  width: 15px;
+    //  background: rgba($color-theme, 0.6);
+    //}
 
     img {
       width: 100%;
@@ -47,7 +47,7 @@
       transform: scale(0);
       transition: all 0.4s ease-out 0s;
       pointer-events: none;
-  
+
       svg {
         height: 100%;
         width: 100%;
