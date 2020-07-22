@@ -82,9 +82,7 @@ function About() {
                   I am <span className="color-theme">{information.name}</span>
                 </h3>
                 <p>
-                  I am a frontend web developer. I can provide clean code and
-                  pixel perfect design. I also make website more & more
-                  interactive with web animations.
+                  {information.aboutContent}
                 </p>
                 <ul>
                   {!information.name ? null : (
@@ -97,24 +95,9 @@ function About() {
                       <b>Age</b> {information.age} Years
                     </li>
                   )}
-                  {!information.phone ? null : (
-                    <li>
-                      <b>Phone</b> {information.phone}
-                    </li>
-                  )}
-                  {!information.nationality ? null : (
-                    <li>
-                      <b>Nationality</b> {information.nationality}
-                    </li>
-                  )}
-                  {!information.language ? null : (
-                    <li>
-                      <b>Languages</b> {information.language}
-                    </li>
-                  )}
                   {!information.email ? null : (
                     <li>
-                      <b>Email</b> {information.email}
+                      <b>Email</b> <a href={"mailto:" + information.email}>seantcanavanpublic@gmail.com</a>
                     </li>
                   )}
                   {!information.address ? null : (
@@ -122,14 +105,14 @@ function About() {
                       <b>Address</b> {information.address}
                     </li>
                   )}
-                  {!information.freelanceStatus ? null : (
+                  {!information.employer ? null : (
                     <li>
-                      <b>Freelance</b> {information.freelanceStatus}
+                      <b>Employer</b> {information.employer}
                     </li>
                   )}
                 </ul>
-                <a href={information.cvfile} className="mi-button">
-                  Download CV
+                <a href={information.resumeFile} className="mi-button">
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -138,7 +121,22 @@ function About() {
       </div>
       <div className="mi-service-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="Services" />
+          <Sectiontitle title="Technical Skills" />
+          <div className="mi-service-wrapper">
+            <div className="row mt-30-reverse">
+              {services.map((service) => (
+                <div
+                  className="col-lg-4 col-md-6 col-12 mt-30"
+                  key={service.title}
+                >
+                  <Service content={service} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="container mi-padding-top">
+          <Sectiontitle title="Interpersonal Skills" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
               {services.map((service) => (

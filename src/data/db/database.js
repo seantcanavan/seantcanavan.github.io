@@ -2,44 +2,36 @@ import Mock from "../mock";
 
 const database = {
   information: {
-    name: 'Devid Chester',
-    aboutContent: "I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
-    age: 24,
-    phone: '',
-    nationality: 'American',
-    language: 'English, French',
-    email: '',
-    address: '121 King Street, Melbourne, Australia',
-    freelanceStatus: 'Available',
+    name: 'Sean T Canavan',
+    aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
+    age: 32,
+    email: 'seantcanavanpublic@gmail.com',
+    address: 'Santa Monica, California',
+    employer: 'GoGuardian',
     socialLinks: {
-      facebook: 'https://facebook.com',
-      twitter: 'https://twitter.com',
-      pinterest: '',
-      behance: '',
-      linkedin: '',
-      dribbble: '',
-      github: 'https://github.com'
+      linkedin: 'https://linkedin.com/in/seantcanavan',
+      github: 'https://github.com/seantcanavan'
     },
     brandImage: '/images/brand-image.jpg',
     aboutImage: '/images/about-image.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
-    cvfile: '/files/empty.pdf'
+    resumeFile: '/files/SeanCanavanResume2020.pdf'
   },
   services: [
     {
-      title: "Web Design",
-      icon: 'color-pallet',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
+      title: "Web Server Design",
+      icon: 'code',
+      details: "An expert at scaling web apps and optimizing back end designs for millions of requests."
     },
     {
       title: "Web Development",
-      icon: 'code',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
+      icon: 'website',
+      details: "Self-taught React developer, student, and addict learning more and more every day."
     },
     {
-      title: "Mobile Application",
-      icon: 'mobile',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
+      title: "Database Design",
+      icon: 'database',
+      details: "SQL, NoSQL, indexes, compound keys, transactions, and document store versus key-value."
     }
   ],
   reviews: [

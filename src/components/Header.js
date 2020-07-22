@@ -18,6 +18,8 @@ function Header(){
             })
     }, [])
 
+    const url = information && information.socialLinks && information.socialLinks.github;
+
     return (
         <nav className={navigationToggler ? "mi-header is-visible" : "mi-header"}>
             <button onClick={handleNavigationToggler} className="mi-header-toggler">
@@ -29,7 +31,7 @@ function Header(){
                         <img src={information.brandImage} alt="brandimage"/>
                     </Link>
                 </div>
-                
+
                 <ul className="mi-header-menu">
                     <li><NavLink exact to="/"><span>Home</span></NavLink></li>
                     <li><NavLink to="/about"><span>About</span></NavLink></li>
@@ -38,7 +40,7 @@ function Header(){
                     <li><NavLink to="/blogs"><span>Blogs</span></NavLink></li>
                     <li><NavLink to="/contact"><span>Contact</span></NavLink></li>
                 </ul>
-                <p className="mi-header-copyright">&copy; {new Date().getFullYear()} <b><a rel="noopener noreferrer" target="_blank" href="https://nuclearthemes.com">NuclearThemes</a></b></p>
+                <p className="mi-header-copyright">&copy; {new Date().getFullYear()} <b><a rel="noopener noreferrer" target="_blank" href={url}>Sean Thomas Canavan</a></b></p>
             </div>
         </nav>
     )
