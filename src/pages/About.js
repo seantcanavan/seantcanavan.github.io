@@ -6,7 +6,7 @@ import * as Icon from "react-feather";
 import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 import Service from "../components/Service";
-import Testimonial from "../components/Testimonial";
+import Project from "../components/Project";
 
 function About() {
   const [toggler, setToggler] = useState(false);
@@ -162,12 +162,12 @@ function About() {
       </div>
       <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <SectionTitle title="Reviews" />
+          <SectionTitle title="Projects" />
           <div className="row justify-content-center">
             <div className="col-12">
               <Slider className="mi-testimonial-slider" {...sliderSettings}>
-                {reviews.map((review) => (
-                  <Testimonial key={review.id} content={review} />
+                {reviews.map((projects) => (
+                  <Project key={projects.id} content={projects} />
                 ))}
               </Slider>
             </div>

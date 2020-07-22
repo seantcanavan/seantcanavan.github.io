@@ -28,7 +28,7 @@ function Resumes(){
     <Layout>
       <div className="mi-skills-area mi-section mi-padding-top">
         <div className="container">
-          <SectionTitle title="My Skills" />
+          <SectionTitle title="Proficiencies" />
           <div className="mi-skills">
             <div className="row mt-30-reverse">
               {skills.map(skill => (

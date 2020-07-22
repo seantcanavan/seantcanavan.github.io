@@ -37,44 +37,52 @@ const database = {
   ],
   interpersonalSkills: [
     {
-      title: "Interpersonal 1",
+      title: "Team Lead",
       icon: 'code',
-      details: "An expert at scaling web apps and optimizing back end designs for millions of requests."
+      details: "Experienced at bridging the gap between product and engineering teams to build quality software on time and to spec."
     },
     {
-      title: "Interpersonal 2",
+      title: "Mentoring and Hiring",
       icon: 'website',
-      details: "Self-taught React developer, student, and addict learning more and more every day."
+      details: "Passionate teacher, mentor, and hirer. Experienced at hiring for both culture and skill set in order to preserve company culture."
     },
     {
-      title: "Interpersonal 3",
+      title: "Effective Communicator",
       icon: 'database',
-      details: "SQL, NoSQL, indexes, compound keys, transactions, and document store versus key-value."
+      details: "Professionally trained communicator and writer adept at breaking down complex technical issues and distilling them to others."
     }
   ],
   reviews: [
     {
       id: 1,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita impedit nobis tempore quaerat quibusdam, aliquid maxime tempora.",
+      content: "Project 1.",
       author: {
-        name: 'Burdette Turner',
-        designation: 'Web Developer, Abc Company'
+        projectName: 'Project Name 1',
+        companyName: 'Company Name'
       }
     },
     {
       id: 2,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita impedit nobis tempore quaerat quibusdam.",
+      content: "Project 2.",
       author: {
-        name: 'Susan Yost',
-        designation: 'Client'
+        projectName: 'Project Name 2',
+        companyName: 'Company Name'
       }
     },
     {
       id: 3,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      content: "Project 3.",
       author: {
-        name: 'Irving Feeney',
-        designation: 'Fiverr Client'
+        projectName: 'Project Name 3',
+        companyName: 'Company Name'
+      }
+    },
+    {
+      id: 4,
+      content: "Project 4",
+      author: {
+        projectName: 'Project Name 4',
+        companyName: 'Company Name'
       }
     }
   ],
@@ -328,7 +336,7 @@ const database = {
       },
       {
         id: 3,
-        year: "2015 - 2016",
+        year: "2006 - 2008",
         graduation: "Bachelor of Science - Electrical Engineering",
         university: "San Jose State University",
         details: "76/135 units completed"
