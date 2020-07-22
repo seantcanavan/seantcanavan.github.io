@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Sectiontitle from "../components/Sectiontitle";
+import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import PortfoliosView from "../components/PortfoliosView";
@@ -36,7 +36,7 @@ function Portfolios() {
     <Layout>
       <div className="mi-about mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Portfolios" />
+          <SectionTitle title="Portfolios" />
           {<PortfoliosView portfolios={currentPortfolios} />}
           {!(portfolios.length > portfoliosPerPage) ? null : (
             <Pagination

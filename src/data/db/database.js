@@ -4,10 +4,11 @@ const database = {
   information: {
     name: 'Sean T Canavan',
     aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
-    age: 32,
+    experience: 10,
     email: 'seantcanavanpublic@gmail.com',
-    address: 'Santa Monica, California',
+    address: 'Los Angeles, California',
     employer: 'GoGuardian',
+    languages: ['GoLang', 'Java', 'Python', 'React', 'Node'],
     socialLinks: {
       linkedin: 'https://linkedin.com/in/seantcanavan',
       github: 'https://github.com/seantcanavan'

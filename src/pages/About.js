@@ -3,7 +3,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import FsLightbox from "fslightbox-react";
 import * as Icon from "react-feather";
-import Sectiontitle from "../components/Sectiontitle";
+import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 import Service from "../components/Service";
 import Testimonial from "../components/Testimonial";
@@ -62,7 +62,7 @@ function About() {
     <Layout>
       <div className="mi-about-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="About Me" />
+          <SectionTitle title="About Me" />
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-about-image">
@@ -94,9 +94,14 @@ function About() {
                       <b>Full Name</b> {information.name}
                     </li>
                   )}
-                  {!information.age ? null : (
+                  {!information.languages ? null : (
                     <li>
-                      <b>Age</b> {information.age} Years
+                      <b>Languages</b> {information.languages.join(', ')}
+                    </li>
+                  )}
+                  {!information.experience ? null : (
+                    <li>
+                      <b>Experience</b> {information.experience} Years
                     </li>
                   )}
                   {!information.email ? null : (
@@ -125,7 +130,7 @@ function About() {
       </div>
       <div className="mi-service-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="Technical Skills" />
+          <SectionTitle title="Technical Skills" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
               {technicalSkills.map((service) => (
@@ -140,7 +145,7 @@ function About() {
           </div>
         </div>
         <div className="container mi-padding-top">
-          <Sectiontitle title="Interpersonal Skills" />
+          <SectionTitle title="Interpersonal Skills" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
               {interpersonalSkills.map((service) => (
@@ -157,7 +162,7 @@ function About() {
       </div>
       <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Reviews" />
+          <SectionTitle title="Reviews" />
           <div className="row justify-content-center">
             <div className="col-12">
               <Slider className="mi-testimonial-slider" {...sliderSettings}>

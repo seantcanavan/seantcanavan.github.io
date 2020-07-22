@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sectiontitle(props) {
+function SectionTitle(props) {
   return (
     <div className="mi-sectiontitle">
       <h2>{props.title}</h2>
@@ -9,4 +9,4 @@ function Sectiontitle(props) {
   );
 }
 
-export default Sectiontitle;
+export default SectionTitle;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import * as Icon from "react-feather";
-import Sectiontitle from "../components/Sectiontitle";
+import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 
 function Contact(){
@@ -78,7 +78,7 @@ function Contact(){
     <Layout>
       <div className="mi-contact-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Contact Me"/>
+          <SectionTitle title="Contact Me"/>
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">

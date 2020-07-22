@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Sectiontitle from "../components/Sectiontitle";
+import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 import BlogsView from "../components/BlogsView";
 import Pagination from "../components/Pagination";
@@ -33,7 +33,7 @@ function Blogs() {
     <Layout>
       <div className="mi-about mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Recent Blogs" />
+          <SectionTitle title="Recent Blogs" />
           <BlogsView blogs={currentPosts} />
           {!(posts.length > postsPerPage) ? null : (
             <Pagination

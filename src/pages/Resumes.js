@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import TrackVisibility from "react-on-screen";
-import Sectiontitle from "../components/Sectiontitle";
+import SectionTitle from "../components/SectionTitle";
 import Smalltitle from '../components/Smalltitle';
 import Layout from "../components/Layout";
 import Progress from "../components/Progress";
@@ -28,7 +28,7 @@ function Resumes(){
     <Layout>
       <div className="mi-skills-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="My Skills" />
+          <SectionTitle title="My Skills" />
           <div className="mi-skills">
             <div className="row mt-30-reverse">
               {skills.map(skill => (
@@ -42,7 +42,7 @@ function Resumes(){
       </div>
       <div className="mi-resume-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Resume" />
+          <SectionTitle title="Resume" />
           <Smalltitle title="Working Experience" icon="briefcase" />
           <div className="mi-resume-wrapper">
             {workingExperience.map(workingExp => (
