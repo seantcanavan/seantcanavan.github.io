@@ -55,34 +55,34 @@ const database = {
   reviews: [
     {
       id: 1,
-      content: "Project 1.",
+      content: "Successfully migrated an acquired startup's entire tech stack from an on-prem deployment to a full AWS cloud configuration using Elastic BeanStalk and Relational Database Service with zero downtime.",
       author: {
-        projectName: 'Project Name 1',
-        companyName: 'Company Name'
+        projectName: 'AWS Cloud Migration',
+        companyName: 'Repost Network'
       }
     },
     {
       id: 2,
-      content: "Project 2.",
+      content: "Integrated a fully remote development team quickly onboarding them adjusting team code review and merge processes appropriately effectively doubling the teams output.",
       author: {
-        projectName: 'Project Name 2',
-        companyName: 'Company Name'
+        projectName: 'Remote Team Integration',
+        companyName: 'GoGuardian'
       }
     },
     {
       id: 3,
-      content: "Project 3.",
+      content: "Designed limitless network and server infrastructure utilizing AWS serverless technologies Lambda and DynamoDB. Applied standardized infrastructure to quickly spin up new microservices in minutes.",
       author: {
-        projectName: 'Project Name 3',
-        companyName: 'Company Name'
+        projectName: 'Serverless Infrastructure Design',
+        companyName: 'Repost Network'
       }
     },
     {
       id: 4,
-      content: "Project 4",
+      content: "Optimized the workflow for 125 data entry employees tasked with ingesting millions of lines of movie and tv metadata every month. Principal developer for all necessary tooling and associated documentation.",
       author: {
-        projectName: 'Project Name 4',
-        companyName: 'Company Name'
+        projectName: 'Bulk Data Ingestion',
+        companyName: 'YouTube, LLC'
       }
     }
   ],
