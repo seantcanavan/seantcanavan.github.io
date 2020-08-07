@@ -1,14 +1,15 @@
 import Mock from "../mock";
+import shuffleArray from "../../utils/shuffleArray";
 
 const database = {
   information: {
-    name: 'Sean T Canavan',
-    aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
+    name: 'Sean Canavan',
+    aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication proficiencies with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
     experience: 10,
     email: 'seantcanavanpublic@gmail.com',
     address: 'Los Angeles, California',
     employer: 'GoGuardian',
-    languages: ['GoLang', 'Java', 'Python', 'React', 'Node'],
+    languages: ['GoLang', 'Java', 'Python', 'ReactJS', 'Node'],
     socialLinks: {
       linkedin: 'https://linkedin.com/in/seantcanavan',
       github: 'https://github.com/seantcanavan'
@@ -47,16 +48,16 @@ const database = {
       details: "Passionate teacher, mentor, and hirer. Experienced at hiring for both culture and skill set in order to preserve company culture."
     },
     {
-      title: "Effective Communicator",
+      title: "Effective Communication",
       icon: 'database',
       details: "Professionally trained communicator and writer adept at breaking down complex technical issues and distilling them to others."
     }
   ],
-  reviews: [
+  projects: [
     {
       id: 1,
       content: "Successfully migrated an acquired startup's entire tech stack from an on-prem deployment to a full AWS cloud configuration using Elastic BeanStalk and Relational Database Service with zero downtime.",
-      author: {
+      about: {
         projectName: 'AWS Cloud Migration',
         companyName: 'Repost Network'
       }
@@ -64,7 +65,7 @@ const database = {
     {
       id: 2,
       content: "Integrated a fully remote development team quickly onboarding them adjusting team code review and merge processes appropriately effectively doubling the teams output.",
-      author: {
+      about: {
         projectName: 'Remote Team Integration',
         companyName: 'GoGuardian'
       }
@@ -72,44 +73,52 @@ const database = {
     {
       id: 3,
       content: "Designed limitless network and server infrastructure utilizing AWS serverless technologies Lambda and DynamoDB. Applied standardized infrastructure to quickly spin up new microservices in minutes.",
-      author: {
+      about: {
         projectName: 'Serverless Infrastructure Design',
         companyName: 'Repost Network'
       }
     },
     {
       id: 4,
-      content: "Optimized the workflow for 125 data entry employees tasked with ingesting millions of lines of movie and tv metadata every month. Principal developer for all necessary tooling and associated documentation.",
-      author: {
+      content: "Optimized the workflow for 125 data entry employees tasked with ingesting millions of lines of movie and tv metadata every month. Principal developer for all custom tooling and associated documentation.",
+      about: {
         projectName: 'Bulk Data Ingestion',
         companyName: 'YouTube, LLC'
       }
+    },
+    {
+      id: 5,
+      content: "Principal GoLang developer for an on-prem software suite designed to load and manage customer's software while collecting local network data and submitting it to Cisco's cloud for threat analysis.",
+      about: {
+        projectName: "Private Cloud",
+        companyName: "Cisco Systems"
+      }
     }
   ],
-  skills: [
+  proficiencies: [
     {
-      title: "HTML5",
-      value: 95
-    },
-    {
-      title: "CSS3",
-      value: 90
-    },
-    {
-      title: "Javascript",
-      value: 70
-    },
-    {
-      title: "jQuery",
-      value: 85
-    },
-    {
-      title: "ReactJS",
+      title: "GoLang",
       value: 80
     },
     {
-      title: "Photoshop",
-      value: 65
+      title: "REST",
+      value: 80
+    },
+    {
+      title: "Java",
+      value: 70
+    },
+    {
+      title: "ReactJS",
+      value: 70
+    },
+    {
+      title: "Python",
+      value: 60
+    },
+    {
+      title: "NodeJS",
+      value: 60
     }
   ],
   portfolios: [
@@ -503,13 +512,13 @@ Mock.onGet("/api/interpersonal-skills").reply( config => {
   return [200, response];
 });
 
-Mock.onGet("/api/reviews").reply(config => {
-  const response = database.reviews;
+Mock.onGet("/api/projects").reply(config => {
+  const response = database.projects;
   return [200, response];
 });
 
-Mock.onGet("/api/skills").reply(config => {
-  const response = database.skills;
+Mock.onGet("/api/proficiencies").reply(config => {
+  const response = database.proficiencies;
   return [200, response];
 });
 

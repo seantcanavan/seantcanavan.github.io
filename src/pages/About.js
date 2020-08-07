@@ -7,13 +7,14 @@ import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 import Service from "../components/Service";
 import Project from "../components/Project";
+import shuffleArray from "../utils/shuffleArray";
 
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
   const [technicalSkills, setTechnicalSkills] = useState([]);
   const [interpersonalSkills, setInterpersonalSkills] = useState([]);
-  const [reviews, setReviews] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   const sliderSettings = {
     dots: false,
@@ -53,8 +54,8 @@ function About() {
     axios.get("/api/interpersonal-skills").then((response) => {
       setInterpersonalSkills(response.data);
     });
-    axios.get("/api/reviews").then((response) => {
-      setReviews(response.data);
+    axios.get("/api/projects").then((response) => {
+      setProjects(response.data);
     });
   }, []);
 
@@ -166,7 +167,7 @@ function About() {
           <div className="row justify-content-center">
             <div className="col-12">
               <Slider className="mi-testimonial-slider" {...sliderSettings}>
-                {reviews.map((projects) => (
+                {shuffleArray(projects).map((projects) => (
                   <Project key={projects.id} content={projects} />
                 ))}
               </Slider>

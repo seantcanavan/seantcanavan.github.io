@@ -8,14 +8,14 @@ import Progress from "../components/Progress";
 import Resume from "../components/Resume";
 
 function Resumes(){
-  const [skills, setSkills] = useState([]);
+  const [proficiencies, setProficiencies] = useState([]);
   const [workingExperience, setWorkingExperience] = useState([]);
   const [educationExperience, setEducationExperience] = useState([]);
 
   useEffect(() =>{
-    axios.get('/api/skills')
+    axios.get('/api/proficiencies')
       .then(response =>{
-        setSkills(response.data);
+        setProficiencies(response.data);
       })
     axios.get('/api/experience')
       .then(response =>{
@@ -31,7 +31,7 @@ function Resumes(){
           <SectionTitle title="Proficiencies" />
           <div className="mi-skills">
             <div className="row mt-30-reverse">
-              {skills.map(skill => (
+              {proficiencies.map(skill => (
                 <TrackVisibility once className="col-lg-6 mt-30" key={skill.title}>
                   <Progress title={skill.title} percentage={skill.value} />
                 </TrackVisibility>

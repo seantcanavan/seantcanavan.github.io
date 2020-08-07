@@ -9,9 +9,9 @@ function Project(props){
             {props.content.content}
           </p>
         </div>
-        <div className="mi-testimonial-author">
-          <h5>{props.content.author.projectName}</h5>
-          <h6>{props.content.author.companyName}</h6>
+        <div className="mi-testimonial-about">
+          <h5>{props.content.about.projectName}</h5>
+          <h6>{props.content.about.companyName}</h6>
         </div>
       </div>
     </div>
