@@ -309,23 +309,30 @@ const database = {
       {
         id: 1,
         year: "2018 - Present",
-        position: "Full Stack Developer and Tech Lead",
+        position: "Full Stack Engineer and Tech Lead",
         company: "GoGuardian",
         details: "Technical lead for the Admin product’s engineering teams both local and overseas. Led design discussions, cross-team collaborations, and acted as the first point of contact for all technical questions related to the product. Performed feasibility analysis and story point estimation for all significant engineering initiatives."
       },
       {
         id: 2,
         year: "2016 - 2018",
-        position: "Backend Developer",
+        position: "Software Engineer",
         company: "Repost Network",
         details: "Second engineer at a burgeoning tech music startup focused on digital rights management and music distribution for new and upcoming artists. Worked directly with the CTO daily and helped the company grow their userbase 3x, became head of company culture, and performed pivotal hiring duties."
       },
       {
         id: 3,
-        year: "2014 - 1016",
+        year: "2014 - 2016",
         position: "Cloud Security Engineer",
         company: "Cisco Systems",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        details: "Principal developer on Cisco's on-prem device and private cloud hardware team. Developed a utility for managing customer's software to run directly on Cisco's hardware and offloaded local networking traffic metrics to the cloud for security analysis."
+      },
+      {
+        id: 4,
+        year: "2012 - 2013",
+        position: "Software Engineer",
+        company: "Vaco for YouTube, LLC",
+        details: "Onboarded initially onto the Business Intelligence team to directly take charge of a significant scaling issue due to a lack of automation of processing incoming movie and tv studio metadata. Designed custom in-house tooling to automate metadata correction, ingestion, and eventually standardization for 125 data entry employees.",
       }
     ],
     educationExperience: [
@@ -490,9 +497,7 @@ const database = {
     }
   ],
   contactInfo: {
-    phoneNumbers: ['+012-3456-7891', '+012-3456-7892'],
-    emailAddress: ['admin.sitename@example.com', 'info.sitename@example.com'],
-    address: "121 King Street, Melbourne, Victoria 3000, Australia"
+    emailAddress: "seantcanavanpublic@gmail.com",
   }
 }
 
@@ -537,7 +542,7 @@ Mock.onGet("/api/blog").reply(config => {
   return [200, response];
 });
 
-Mock.onGet("/api/contactinfo").reply(config => {
+Mock.onGet("/api/contact-info").reply(config => {
   const response = database.contactInfo;
   return [200, response];
 });

@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import * as Icon from "react-feather";
 import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/Layout";
 
 function Contact(){
-  const [phoneNumbers, setPhoneNumbers] = useState([]);
   const [emailAddress, setEmailAddress] = useState([]);
-  const [address, setAddress] = useState([]);
-  const [formdata, setFormdata] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
@@ -19,16 +17,16 @@ function Contact(){
 
   const submitHandler = (event) =>{
     event.preventDefault();
-    if( !formdata.name ){
+    if( !formData.name ){
       setError(true);
       setMessage('Name is required');
-    } else if( !formdata.email ){
+    } else if( !formData.email ){
       setError(true);
       setMessage('Email is required');
-    } else if( !formdata.subject ){
+    } else if( !formData.subject ){
       setError(true);
       setMessage('Subject is required');
-    } else if( !formdata.message ){
+    } else if( !formData.message ){
       setError(true);
       setMessage('Message is required');
     } else{
@@ -37,14 +35,10 @@ function Contact(){
     }
   }
   const handleChange = (event) => {
-    setFormdata({
-      ...formdata,
+    setFormData({
+      ...formData,
       [event.currentTarget.name] : event.currentTarget.value
     })
-  }
-  const numberFormatter = (number) =>{
-    const phnNumber = number;
-    return phnNumber;
   }
 
   const handleAlerts = () => {
@@ -66,11 +60,9 @@ function Contact(){
   }
 
   useEffect(() => {
-    axios.get('/api/contactinfo')
+    axios.get('/api/contact-info')
       .then(response =>{
-        setPhoneNumbers(response.data.phoneNumbers);
         setEmailAddress(response.data.emailAddress);
-        setAddress(response.data.address);
       })
   }, [])
 
@@ -78,27 +70,27 @@ function Contact(){
     <Layout>
       <div className="mi-contact-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <SectionTitle title="Contact Me"/>
+          <SectionTitle title="Contact"/>
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
-                <h4>Get In Touch</h4>
+                <h4>Get in touch</h4>
                 <form action="#" className="mi-form mi-contact-form" onSubmit={submitHandler}>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-name">Enter your name*</label>
-                    <input onChange={handleChange} type="text" name="name" id="contact-form-name" value={formdata.name}/>
+                    <input onChange={handleChange} type="text" name="name" id="contact-form-name" value={formData.name}/>
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-email">Enter your email*</label>
-                    <input onChange={handleChange} type="text" name="email" id="contact-form-email" value={formdata.email}/>
+                    <input onChange={handleChange} type="text" name="email" id="contact-form-email" value={formData.email}/>
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-subject">Enter your subject*</label>
-                    <input onChange={handleChange} type="text" name="subject" id="contact-form-subject" value={formdata.subject}/>
+                    <input onChange={handleChange} type="text" name="subject" id="contact-form-subject" value={formData.subject}/>
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-message">Enter your Message*</label>
-                    <textarea onChange={handleChange} name="message" id="contact-form-message" cols="30" rows="6" value={formdata.message}></textarea>
+                    <textarea onChange={handleChange} name="message" id="contact-form-message" cols="30" rows="6" value={formData.message}/>
                   </div>
                   <div className="mi-form-field">
                     <button className="mi-button" type="submit">Send Mail</button>
@@ -109,19 +101,6 @@ function Contact(){
             </div>
             <div className="col-lg-6">
               <div className="mi-contact-info">
-                {!phoneNumbers ? null : (
-                  <div className="mi-contact-infoblock">
-                    <span className="mi-contact-infoblock-icon">
-                      <Icon.Phone/>
-                    </span>
-                    <div className="mi-contact-infoblock-content">
-                      <h6>Phone</h6>
-                      {phoneNumbers.map(phoneNumber =>(
-                        <p key={phoneNumber}><a href={numberFormatter(phoneNumber)}>{phoneNumber}</a></p>
-                      ))}
-                    </div>
-                  </div>
-                )}
                 {!emailAddress ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
@@ -129,20 +108,7 @@ function Contact(){
                     </span>
                     <div className="mi-contact-infoblock-content">
                       <h6>Email</h6>
-                      {emailAddress.map(email => (
-                        <p key={email}><a href={`mailto:${email}`}>{email}</a></p>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {!phoneNumbers ? null : (
-                  <div className="mi-contact-infoblock">
-                    <span className="mi-contact-infoblock-icon">
-                      <Icon.MapPin/>
-                    </span>
-                    <div className="mi-contact-infoblock-content">
-                      <h6>Address</h6>
-                      <p>{address}</p>
+                      <p key={emailAddress}><a href={`mailto:${emailAddress}`}>{emailAddress}</a></p>
                     </div>
                   </div>
                 )}
