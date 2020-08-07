@@ -5,11 +5,11 @@ function Progress(props){
   const progressQuery = () =>{
     if(winWidth && winWidth > 767){
       return(<span
-        className="mi-progress-active"
-        style={props.isVisible ? {width: `${props.percentage}%`} : {width: 0}}
-      ></span>)
+  className="mi-progress-active"
+  style={props.isVisible ? {width: `${props.percentage}%`} : {width: 0}}
+  />)
     }
-    return(<span className="mi-progress-active" style={{width: `${props.percentage}%`}}></span>)
+    return(<span className="mi-progress-active" style={{width: `${props.percentage}%`}}/>)
   }
   return (
     <div className="mi-progress">

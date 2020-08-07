@@ -1,5 +1,4 @@
 import Mock from "../mock";
-import shuffleArray from "../../utils/shuffleArray";
 
 const database = {
   information: {
@@ -319,42 +318,42 @@ const database = {
 }
 
 
-Mock.onGet("/api/information").reply(config => {
+Mock.onGet("/api/information").reply(() => {
   const response = database.information;
   return [200, response];
 });
 
-Mock.onGet("/api/technical-skills").reply(config => {
+Mock.onGet("/api/technical-skills").reply(() => {
   const response = database.technicalSkills;
   return [200, response];
 });
 
-Mock.onGet("/api/interpersonal-skills").reply( config => {
+Mock.onGet("/api/interpersonal-skills").reply( () => {
   const response = database.interpersonalSkills;
   return [200, response];
 });
 
-Mock.onGet("/api/projects").reply(config => {
+Mock.onGet("/api/projects").reply(() => {
   const response = database.projects;
   return [200, response];
 });
 
-Mock.onGet("/api/proficiencies").reply(config => {
+Mock.onGet("/api/proficiencies").reply(() => {
   const response = database.proficiencies;
   return [200, response];
 });
 
-Mock.onGet("/api/experience").reply(config => {
+Mock.onGet("/api/experience").reply(() => {
   const response = database.experience;
   return [200, response];
 });
 
-Mock.onGet("/api/blog").reply(config => {
+Mock.onGet("/api/blog").reply(() => {
   const response = database.blogs;
   return [200, response];
 });
 
-Mock.onGet("/api/contact-info").reply(config => {
+Mock.onGet("/api/contact-info").reply(() => {
   const response = database.contactInfo;
   return [200, response];
 });

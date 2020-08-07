@@ -28,7 +28,7 @@ function BlogDetails(props) {
     <Layout>
       <div className="mi-blog-details mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <ReactMarkdown source={content} escapeHtml={false}></ReactMarkdown>
+          <ReactMarkdown source={content} escapeHtml={false}/>
           <div className="mi-blog-details-comments mt-30">
             <Disqus.DiscussionEmbed
               shortname={disqusShortname}

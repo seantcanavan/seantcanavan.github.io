@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Blog(props) {
   const { id, featuredImage, title, createDay, createMonth, fileSource } = props.data;
   const getShortMonth = month => {
     return month.slice(0, 3);
   };
-  const getNospaceTitle = fileSource => {
+  const getNoSpaceTitle = fileSource => {
     let tempArr = fileSource.split('/');
     let fileName = tempArr[tempArr.length - 1];
-    let getName = fileName.slice(0, -3);
-    return getName;
+    return fileName.slice(0, -3);
   };
   return (
     <div className="mi-blog">
       <div className="mi-blog-image">
-        <Link to={`blogs/blog-details/${id}/${getNospaceTitle(fileSource)}`}>
+        <Link to={`blogs/blog-details/${id}/${getNoSpaceTitle(fileSource)}`}>
           <img src={featuredImage} alt={title} />
         </Link>
         <div className="mi-blog-date">
@@ -25,7 +24,7 @@ function Blog(props) {
       </div>
       <div className="mi-blog-content">
         <h5>
-          <Link to={`blogs/blog-details/${id}/${getNospaceTitle(fileSource)}`}>
+          <Link to={`blogs/blog-details/${id}/${getNoSpaceTitle(fileSource)}`}>
             {title}
           </Link>
         </h5>

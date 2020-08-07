@@ -49,11 +49,11 @@ function Resumes(){
               <Resume key={workingExp.id} resumeData={workingExp} />
             ))}
           </div>
-          <div className="mt-30"></div>
+          <div className="mt-30"/>
           <Smalltitle title="Educational Qualifications" icon="book" />
           <div className="mi-resume-wrapper">
-            {educationExperience.map(educatonExp => (
-              <Resume key={educatonExp.id} resumeData={educatonExp}/>
+            {educationExperience.map(educationExperience => (
+              <Resume key={educationExperience.id} resumeData={educationExperience}/>
             ))}
           </div>
         </div>

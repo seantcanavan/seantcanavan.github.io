@@ -14,6 +14,6 @@ function Resume(props) {
       </div>
     </div>
   );
-};
+}
 
 export default Resume;

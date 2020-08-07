@@ -38,7 +38,7 @@ function About() {
     ],
   };
 
-  const handleToggler = (event) => {
+  const handleToggler = () => {
     setToggler({
       toggler: !toggler,
     });
@@ -70,7 +70,7 @@ function About() {
                 <img
                   src={information.aboutImage}
                   alt="about"
-                  onClick={() => handleToggler(!toggler)}
+                  onClick={() => handleToggler()}
                 />
                 <span className="mi-about-image-icon">
                   <Icon.ZoomIn />
