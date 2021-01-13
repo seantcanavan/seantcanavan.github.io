@@ -11,7 +11,7 @@ import Notfound from "./pages/Notfound";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
