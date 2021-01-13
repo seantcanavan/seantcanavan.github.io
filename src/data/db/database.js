@@ -3,7 +3,7 @@ import Mock from "../mock";
 const database = {
   information: {
     name: 'Sean Canavan',
-    aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication proficiencies with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
+    aboutContent: "A full stack developer and tech lead with over 10 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
     experience: 10,
     email: 'seantcanavanpublic@gmail.com',
     address: 'Los Angeles, California',
@@ -131,21 +131,21 @@ const database = {
       },
       {
         id: 2,
-        year: "2016 - 2018",
+        year: "2017 - 2018",
         position: "Software Engineer",
         company: "Repost Network",
         details: "Second engineer at a burgeoning tech music startup focused on digital rights management and music distribution for new and upcoming artists. Worked directly with the CTO daily and helped the company grow their userbase 3x, became head of company culture, and performed pivotal hiring duties."
       },
       {
         id: 3,
-        year: "2014 - 2016",
+        year: "2016 - 2017",
         position: "Cloud Security Engineer",
         company: "Cisco Systems",
         details: "Principal developer on Cisco's on-prem device and private cloud hardware team. Developed a utility for managing customer's software to run directly on Cisco's hardware and offloaded local networking traffic metrics to the cloud for security analysis."
       },
       {
         id: 4,
-        year: "2012 - 2013",
+        year: "2014 - 2015",
         position: "Software Engineer",
         company: "Vaco for YouTube, LLC",
         details: "Onboarded initially onto the Business Intelligence team to directly take charge of a significant scaling issue due to a lack of automation of processing incoming movie and tv studio metadata. Designed custom in-house tooling to automate metadata correction, ingestion, and eventually standardization for 125 data entry employees.",
