@@ -20,11 +20,11 @@ function About() {
     dots: false,
     infinite: true,
     arrows: false,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 10000,
     pauseOnHover: true,
     adaptiveHeight: true,
     responsive: [
@@ -86,9 +86,7 @@ function About() {
                 <h3>
                   I am <span className="color-theme">{information.name}</span>
                 </h3>
-                <p>
-                  {information.aboutContent}
-                </p>
+                <p>{information.aboutContent}</p>
                 <ul>
                   {!information.name ? null : (
                     <li>
@@ -97,7 +95,7 @@ function About() {
                   )}
                   {!information.languages ? null : (
                     <li>
-                      <b>Languages</b> {information.languages.join(', ')}
+                      <b>Languages</b> {information.languages.join(", ")}
                     </li>
                   )}
                   {!information.experience ? null : (
@@ -107,7 +105,10 @@ function About() {
                   )}
                   {!information.email ? null : (
                     <li>
-                      <b>Email</b> <a href={"mailto:" + information.email}>seantcanavanpublic@gmail.com</a>
+                      <b>Email</b>{" "}
+                      <a href={"mailto:" + information.email}>
+                        seantcanavanpublic@gmail.com
+                      </a>
                     </li>
                   )}
                   {!information.address ? null : (
