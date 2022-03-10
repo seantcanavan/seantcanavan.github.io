@@ -25,8 +25,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{ts,html,scss,json}\"",
+    "format:ci": "prettier --check \"src/**/*.{ts,html,scss,json}\"",
+    "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

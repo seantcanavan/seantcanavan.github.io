@@ -138,7 +138,6 @@ h6 {
     }
 }
 
-
 ::-moz-selection {
     background: $color-theme;
     color: #ffffff;
@@ -160,7 +159,6 @@ h6 {
 }
 
 a {
-
     &:hover,
     &:focus,
     &:active {
@@ -251,10 +249,10 @@ blockquote {
     }
 }
 
-[class^="flaticon-"],
-[class*=" flaticon-"],
-[class^="flaticon-"],
-[class*=" flaticon-"] {
+[class^='flaticon-'],
+[class*=' flaticon-'],
+[class^='flaticon-'],
+[class*=' flaticon-'] {
     line-height: 1;
 
     &::before,
@@ -284,11 +282,9 @@ blockquote {
     }
 }
 
-
 input,
 select,
 textarea {
-
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
@@ -297,10 +293,9 @@ textarea {
     }
 }
 
-
 /* Checkbox & Radio Styles */
-input[type=checkbox],
-input[type=radio] {
+input[type='checkbox'],
+input[type='radio'] {
     visibility: hidden;
     opacity: 0;
     display: inline-block;
@@ -309,13 +304,13 @@ input[type=radio] {
     height: 0;
     display: none;
 
-    &~label {
+    & ~ label {
         position: relative;
         padding-left: 24px;
         cursor: pointer;
 
         &:before {
-            content: "";
+            content: '';
             font-family: 'Font Awesome 5 free', monospace;
             font-weight: 700;
             position: absolute;
@@ -330,11 +325,11 @@ input[type=radio] {
     }
 
     &:checked {
-        &~label {
+        & ~ label {
             color: $color-theme;
 
             &:before {
-                content: "\f00c";
+                content: '\f00c';
 
                 color: $color-theme;
                 border-color: $color-theme;
@@ -343,10 +338,10 @@ input[type=radio] {
     }
 }
 
-input[type=radio] {
-    &~label {
+input[type='radio'] {
+    & ~ label {
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 50%;
@@ -355,17 +350,17 @@ input[type=radio] {
             height: 15px;
             width: 15px;
             margin-top: -8px;
-            line-height: .5;
-            font-size: 28px
+            line-height: 0.5;
+            font-size: 28px;
         }
     }
 
     &:checked {
-        &~label {
+        & ~ label {
             &::before {
-                content: "";
+                content: '';
                 color: $color-theme;
-                border-color: $color-theme
+                border-color: $color-theme;
             }
         }
     }

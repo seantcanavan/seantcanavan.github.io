@@ -17,7 +17,7 @@ const database = {
     brandImage: "/images/github-avatar.png",
     aboutImage: "/images/750x1089-code.png",
     aboutImageLg: "/images/890x1293-code.png",
-    resumeFile: "/files/SeanCanavanResume2020.pdf",
+    resumeFile: "/files/SeanCanavanResume2022TD.pdf",
   },
   technicalSkills: [
     {
