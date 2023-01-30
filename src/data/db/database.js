@@ -4,12 +4,12 @@ const database = {
   information: {
     name: "Sean Canavan",
     aboutContent:
-      "A senior team lead and full stack developer with over 12 years of programming experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid programming and systems design mindset to build world-class products in highly collaborative and agile environments.",
-    experience: 12,
+      "A passionate engineering leader focused on culture, technology, and cost with over 15 years of experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid technical mindset to build world-class teams and products in highly collaborative and agile environments.",
+    experience: 15,
     email: "seantcanavanpublic@gmail.com",
     address: "Tulsa, Oklahoma",
-    employer: "GitWit",
-    languages: ["TypeScript", "Angular", "ReactJS", "NestJS", "GoLang"],
+    employer: "Learnfully",
+    languages: ["GoLang, TypeScript", "NodeJS", "ReactJS"],
     socialLinks: {
       linkedin: "https://linkedin.com/in/seantcanavan",
       github: "https://github.com/seantcanavan",
@@ -117,7 +117,7 @@ const database = {
   ],
   proficiencies: [
     {
-      title: "NodeJS",
+      title: "GoLang",
       value: 80,
     },
     {
@@ -125,11 +125,11 @@ const database = {
       value: 80,
     },
     {
-      title: "NestJS",
+      title: "NodeJS",
       value: 75,
     },
     {
-      title: "GoLang",
+      title: "NestJS",
       value: 60,
     },
     {
@@ -141,11 +141,11 @@ const database = {
       value: 60,
     },
     {
-      title: "Angular",
-      value: 40,
+      title: "Python",
+      value: 50,
     },
     {
-      title: "Python",
+      title: "Angular",
       value: 40,
     },
   ],
@@ -153,14 +153,22 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "2021 - Present",
-        position: "Software Architect, Team Lead, and Full Stack Engineer",
+        year: "2022 - Present",
+        position: "Director of Engineering, Software Architect, and Full Stack Engineer",
+        company: "Learnfully",
+        details:
+          "Design and implement the full software stack from frontend to backend for the Learnfully suite of software services. Deploy an ecosystem of AWS systems following cloud-based microservices design best practices. Build multiple scalable MongoDB collections and their associated indexes. Configure CI/CD pipelines for fast and reliable deployments, test and run automated backups, and follow industry best practices around security, authentication, and authorization. Utilize infrastructure as code to rapidly build or tear down resources as needed on the fly. Deprecate and then tear down existing legacy systems cleanly and rapidly - reducing monthly AWS costs over 60%",
+      },
+      {
+        id: 2,
+        year: "2021 - 2022",
+        position: "Director of Engineering, Software Architect, and Full Stack Engineer",
         company: "GitWit, LLC",
         details:
           "Principal software architect in charge of rewriting a tech-debt ridden codebase to a full MEAN stack project including database migration. Went from concept to launch in 6 months without bugs all-the-while learning MEAN stack on the job. The project in question helps essential workers receive funding for child care and pays out $2mil annually.",
       },
       {
-        id: 2,
+        id: 3,
         year: "2018 - 2021",
         position: "Tech Lead and Full Stack Engineer",
         company: "GoGuardian",
@@ -168,7 +176,7 @@ const database = {
           "Technical lead for the Admin product’s engineering teams both local and overseas. Led design discussions, cross-team collaborations, and acted as the first point of contact for all technical questions related to the product. Performed feasibility analysis and story point estimation for all significant engineering initiatives.",
       },
       {
-        id: 3,
+        id: 4,
         year: "2017 - 2018",
         position: "Software Engineer",
         company: "Repost Network",
@@ -176,7 +184,7 @@ const database = {
           "Second engineer at a burgeoning tech music startup focused on digital rights management and music distribution for new and upcoming artists. Worked directly with the CTO daily and helped the company grow their userbase 3x, became head of company culture, and performed pivotal hiring duties.",
       },
       {
-        id: 4,
+        id: 5,
         year: "2016 - 2017",
         position: "Cloud Security Engineer",
         company: "Cisco Systems",
@@ -184,7 +192,7 @@ const database = {
           "Principal developer on Cisco's on-prem device and private cloud hardware team. Developed a utility for managing customer's software to run directly on Cisco's hardware and offloaded local networking traffic metrics to the cloud for security analysis.",
       },
       {
-        id: 5,
+        id: 6,
         year: "2014 - 2015",
         position: "Software Engineer",
         company: "Vaco for YouTube, LLC",
