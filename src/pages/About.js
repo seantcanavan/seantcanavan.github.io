@@ -107,7 +107,7 @@ function About() {
                     <li>
                       <b>Email</b>{" "}
                       <a href={"mailto:" + information.email}>
-                        seantcanavanpublic@gmail.com
+                        seantcanavan@gmail.com
                       </a>
                     </li>
                   )}

@@ -6,7 +6,7 @@ const database = {
     aboutContent:
       "A passionate engineering leader focused on culture, technology, and cost with over 15 years of experience and a proven track record leading local, remote, and overseas teams cohesively. Blending a strong set of written and verbal communication skills with a rock-solid technical mindset to build world-class teams and products in highly collaborative and agile environments.",
     experience: 15,
-    email: "seantcanavanpublic@gmail.com",
+    email: "seantcanavan@gmail.com",
     address: "Tulsa, Oklahoma",
     employer: "Learnfully",
     languages: ["GoLang, TypeScript", "NodeJS", "ReactJS"],
@@ -157,7 +157,7 @@ const database = {
         position: "Director of Engineering, Software Architect, and Full Stack Engineer",
         company: "Learnfully",
         details:
-          "Design and implement the full software stack from frontend to backend for the Learnfully suite of software services. Deploy an ecosystem of AWS systems following cloud-based microservices design best practices. Build multiple scalable MongoDB collections and their associated indexes. Configure CI/CD pipelines for fast and reliable deployments, test and run automated backups, and follow industry best practices around security, authentication, and authorization. Utilize infrastructure as code to rapidly build or tear down resources as needed on the fly. Deprecate and then tear down existing legacy systems cleanly and rapidly - reducing monthly AWS costs over 60%",
+          "Engineering lead in charge of all product design, research, feasibility, estimation, and implementation. Build out the entire Learnfully product portfolio from scratch using the most up-to-date languages, technologies, and cloud-architecture principles. Implement a fully modern and truly future proof tech stack including React 17, MongoDB 6.0, and GoLang 1.18. Utilized serverless technologies at the API and database levels to keep running costs low and totally eliminate operational costs and overhead. Design and implement the entire back end stack and database architecture. Built from the ground up using infrastructure-as-code and CI/CD pipelines to enable rapid development and releases while also following industry best practices.",
       },
       {
         id: 2,
@@ -364,7 +364,7 @@ const database = {
     },
   ],
   contactInfo: {
-    emailAddress: "seantcanavanpublic@gmail.com",
+    emailAddress: "seantcanavan@gmail.com",
   },
 };
 
